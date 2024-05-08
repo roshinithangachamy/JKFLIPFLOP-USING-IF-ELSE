@@ -1,4 +1,6 @@
-# JKFLIPFLOP-USING-IF-ELSE
+## EX-7 <p align="center"><b> JKFLIPFLOP-USING-IF-ELSE  </b> 
+
+## DATE:
 
 **AIM:** 
 
@@ -33,16 +35,57 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
-
-/* write all the steps invloved */
+```
+1.Go to quartus software.
+2.Set new environment.
+3.Type the code to implement SR flipflop using verilog and validating their functionality using their functional tables.
+4.Run the program.
+5.Give inputs in the waveform table.
+6.Run the program
+```
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+## Developed by: T.ROSHINI
+## RegisterNumber: 212223230175
+```
+module jk_flipflop(jk,pst,clr,clk,qp,qbar);
+input [1:0] jk;
+input pst,clr,clk;
+output qp,qbar;
+reg qp;
+wire q;
+always @ (posedge clk) if (pst)
+qp= 1;
+else
+begin
+if (clr)
+ qp= 0;
+ else
+ begin
+ case (jk)
+2'b00: qp=q;
+2'b01 : qp = 1'b0;
+2'b10 : qp =1'b1;
+2'b11 : qp = ~q;
+default qp =0;
+endcase
+end
+end
+assign qbar = ~q;
+assign q = qp;
+endmodule 
+```
+
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![jk rtl](https://github.com/roshinithangachamy/JKFLIPFLOP-USING-IF-ELSE/assets/147118341/94146dfc-2043-46aa-880e-6d3e403a293b)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![jk waveform](https://github.com/roshinithangachamy/JKFLIPFLOP-USING-IF-ELSE/assets/147118341/79a828f9-aa2d-487b-a138-31873a01dfab)
+
 **RESULTS**
+
+Implementation of JK flipflop using verilog and validating their functionality using their functional tables is executed and the output is verified successfully.
