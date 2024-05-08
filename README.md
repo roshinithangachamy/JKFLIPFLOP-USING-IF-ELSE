@@ -1,6 +1,6 @@
-## EX-7 <p align="center"><b> JKFLIPFLOP-USING-IF-ELSE  </b> 
+## EX-7 <p align="center"><b> JKFLIPFLOP-USING-IF-ELSE  </b>
 
-## DATE:
+**DATE:**
 
 **AIM:** 
 
@@ -46,8 +46,8 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-## Developed by: T.ROSHINI
-## RegisterNumber: 212223230175
+**Developed by: T.ROSHINI**
+**RegisterNumber: 212223230175**
 ```
 module jk_flipflop(jk,pst,clr,clk,qp,qbar);
 input [1:0] jk;
